@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Laxman Panigrahi | Computer Science and Engineering Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">Laxman<span>.</span></div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-status" id="loaderStatus">Initializing...</div>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Laxman<span class="accent">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nl active">Home</a></li>
+      <li><a href="#about" class="nl">About</a></li>
+      <li><a href="#education" class="nl">Education</a></li>
+      <li><a href="#skills" class="nl">Skills</a></li>
+      <li><a href="#projects" class="nl">Projects</a></li>
+      <li><a href="#certifications" class="nl">Certs</a></li>
+      <li><a href="#goals" class="nl">Goals</a></li>
+      <li><a href="#github-stats" class="nl">GitHub</a></li>
+      <li><a href="#resume" class="nl">Resume</a></li>
+      <li><a href="#contact" class="nl">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE OVERLAY -->
+<div class="mob-overlay" id="mobOverlay">
+  <button class="mob-close" id="mobClose">✕</button>
+  <ul class="mob-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#goals">Career Goals</a></li>
+    <li><a href="#github-stats">GitHub Stats</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mob-socials">
+    <a href="https://github.com/laxucoder" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/laxman-panigrahi-364455363?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/galaxy.coding?igsh=dnN2ZHJndXpuanJ2" target="_blank">Instagram</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <canvas id="bgCanvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-top reveal-up">
+      <span class="hero-badge"><span class="live-dot"></span> Open to Internships & Opportunities</span>
+    </div>
+    <div class="hero-profile reveal-up">
+      <div class="profile-pic-wrap">
+        <div class="profile-pic" id="heroPic">
+          <img src="images/profile.png" alt="Laxman Panigrahi" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div class="pic-placeholder">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="44" r="26" fill="#00d4ff33" stroke="#00d4ff" stroke-width="1.5"/>
+              <circle cx="60" cy="42" r="16" fill="#00d4ff44"/>
+              <ellipse cx="60" cy="100" rx="34" ry="22" fill="#00d4ff22" stroke="#00d4ff" stroke-width="1.5"/>
+              <text x="60" y="50" text-anchor="middle" fill="#00d4ff" font-size="20" font-family="Space Grotesk" font-weight="700">LP</text>
+            </svg>
+          </div>
+          <div class="pic-ring"></div>
+          <div class="pic-ring2"></div>
+        </div>
+      </div>
+    </div>
+    <h1 class="hero-name reveal-up">
+      <span class="glitch" data-text="Laxman Panigrahi">Laxman Panigrahi</span>
+    </h1>
+    <div class="hero-title reveal-up">
+      <span class="mono">// </span>
+      <span class="typed" id="typedEl"></span><span class="blink-cursor">█</span>
+    </div>
+    <p class="hero-bio reveal-up">
+      B.Tech CSE (Data Science) · Galgotias University · Noida, UP<br/>
+      From <span class="accent-t">Wadsa, Maharashtra</span> · Building my future one Line of Code at a time 🚀
+    </p>
+    <div class="hero-actions reveal-up">
+      <a href="#projects" class="btn-grad">View My Work <span class="arr">→</span></a>
+      <a href="#resume" class="btn-glass">Download CV <span>↓</span></a>
+      <a href="#contact" class="btn-outline2">Hire Me</a>
+    </div>
+    <div class="hero-socials reveal-up">
+      <a href="https://github.com/laxucoder" target="_blank" class="hsoc" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>laxucoder</span>
+      </a>
+      <a href="https://www.linkedin.com/in/laxman-panigrahi-364455363?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="hsoc" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://www.instagram.com/galaxy.coding?igsh=dnN2ZHJndXpuanJ2" target="_blank" class="hsoc" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="mailto:laxucoder@gmail.com" class="hsoc" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Email</span>
+      </a>
+    </div>
+    <div class="hero-stats reveal-up">
+      <div class="hstat"><span class="hstat-n" data-target="18+">0</span><span class="hstat-l">Projects</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="hstat-n" data-target="15+">0</span><span class="hstat-l">Technologies</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="hstat-n" data-target="30+">0</span><span class="hstat-l">DSA Problems</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="hstat-n" data-target="1500+">0</span><span class="hstat-l">Commits</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec about-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">About Me</div>
+    <div class="about-wrap">
+      <div class="about-left reveal-left">
+        <div class="about-pic-wrap">
+          <div class="about-pic" id="aboutPic">
+            <img src="images/profile.png" alt="Laxman Panigrahi" class="about-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+            <div class="ap-placeholder">
+              <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#00d4ff"/></linearGradient></defs>
+                <circle cx="80" cy="58" r="34" fill="url(#pg)" opacity="0.25" stroke="url(#pg)" stroke-width="1.5"/>
+                <circle cx="80" cy="55" r="22" fill="url(#pg)" opacity="0.35"/>
+                <ellipse cx="80" cy="130" rx="46" ry="28" fill="url(#pg)" opacity="0.2" stroke="url(#pg)" stroke-width="1.5"/>
+                <text x="80" y="65" text-anchor="middle" fill="#00d4ff" font-size="26" font-family="Space Grotesk" font-weight="700">LP</text>
+              </svg>
+            </div>
+            <div class="ap-glow"></div>
+          </div>
+          <div class="about-float-card afc1">
+            <span>🎓</span>
+            <div><div class="afc-t">Galgotias University</div><div class="afc-s">B.Tech CSE · 2026–2030</div></div>
+          </div>
+          <div class="about-float-card afc2">
+            <span>📍</span>
+            <div><div class="afc-t">Noida, UP</div><div class="afc-s">Wadsa, Maharashtra</div></div>
+          </div>
+          <div class="about-float-card afc3">
+            <span>💻</span>
+            <div><div class="afc-t">macOS + Windows</div><div class="afc-s">Cross-platform Dev</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal-right">
+        <h2>Hey there! I'm <span class="grad-text">Laxman</span> 👋</h2>
+        <p>I'm a passionate <strong>B.Tech CSE (Data Science)</strong> student at <strong>Galgotias University, Noida</strong> — batch of 2026. Originally from <strong>Wadsa, Maharashtra</strong>, I moved to Noida to chase my dream of becoming a top software engineer.</p>
+        <p>I love building things — from full-stack web apps to machine learning models. My journey started with curiosity, and now I code every single day. Whether it's solving problems on LeetCode, pushing commits on GitHub, or learning a new framework, I'm always leveling up.</p>
+        <p>My goal? Land at a <strong>top tech company</strong>, build products that impact millions, and keep learning forever. 🚀</p>
+        <div class="about-tags">
+          <span>⚡ Fast Learner</span><span>🔍 Problem Solver</span><span>🤝 Team Player</span>
+          <span>🚀 Builder Mindset</span><span>📊 Data Enthusiast</span><span>🎯 Goal-Oriented</span>
+        </div>
+        <div class="info-grid">
+          <div class="ig-item"><span class="ig-label">Name</span><span class="ig-val">Laxman Panigrahi</span></div>
+          <div class="ig-item"><span class="ig-label">Email</span><a href="mailto:laxucoder@gmail.com" class="ig-val ig-link">laxucoder@gmail.com</a></div>
+          <div class="ig-item"><span class="ig-label">University</span><span class="ig-val">Galgotias University</span></div>
+          <div class="ig-item"><span class="ig-label">Batch</span><span class="ig-val">2026–2030</span></div>
+          <div class="ig-item"><span class="ig-label">Hometown</span><span class="ig-val">Wadsa, Maharashtra</span></div>
+          <div class="ig-item"><span class="ig-label">Current City</span><span class="ig-val">Noida, Uttar Pradesh</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="sec edu-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Academic Journey</div>
+    <h2 class="sec-title reveal-up">My <span class="grad-text">Education</span></h2>
+    <div class="edu-grid">
+      <div class="edu-card active-edu reveal-up">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-badge">Current</div>
+        <h3>B.Tech in Computer Science & Engineering</h3>
+        <div class="edu-spec">Specialization: Data Science</div>
+        <div class="edu-school">Galgotias University · Noida, Uttar Pradesh</div>
+        <div class="edu-year">2026 – 2030</div>
+        <p class="edu-desc">Pursuing my dream degree with a focus on Data Science, Machine Learning, and Software Engineering. Actively building projects, contributing to open source, and preparing for top tech placements.</p>
+        <div class="edu-tags">
+          <span>Data Science</span><span>Machine Learning</span><span>Software Engineering</span><span>DSA</span>
+        </div>
+      </div>
+      <div class="edu-card reveal-up">
+        <div class="edu-icon">📚</div>
+        <h3>Higher Secondary (12th)</h3>
+        <div class="edu-spec">Science Stream — PCMB + IT</div>
+        <div class="edu-school">Wadsa, Maharashtra</div>
+        <div class="edu-year">Completed 2026</div>
+        <p class="edu-desc">Completed higher secondary with Science stream. Built strong fundamentals in Mathematics, Physics, and Information Technology that fuel my engineering journey today.</p>
+        <div class="edu-tags"><span>Science</span><span>Mathematics</span><span>Information Technology</span></div>
+      </div>
+      <div class="edu-card reveal-up">
+        <div class="edu-icon">🏫</div>
+        <h3>Secondary (10th)</h3>
+        <div class="edu-spec">SSC Board</div>
+        <div class="edu-school">Wadsa, Maharashtra</div>
+        <div class="edu-year">Completed 2024</div>
+        <p class="edu-desc">Built a strong academic base through secondary education. Discovered my passion for computers and technology during this phase.</p>
+        <div class="edu-tags"><span>SSC</span><span>Maharashtra Board</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec skills-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Technical Arsenal</div>
+    <h2 class="sec-title reveal-up">Skills & <span class="grad-text">Technologies</span></h2>
+    <div class="skill-cats reveal-up">
+      <button class="scat active" data-cat="all">All Skills</button>
+      <button class="scat" data-cat="lang">Languages</button>
+      <button class="scat" data-cat="web">Web Dev</button>
+      <button class="scat" data-cat="ds">Data Science</button>
+      <button class="scat" data-cat="tools">Tools & Platforms</button>
+      <button class="scat" data-cat="os">OS & Editors</button>
+    </div>
+    <div class="skills-grid" id="skillsGrid">
+
+      <div class="skill-card reveal-up" data-cat="lang">
+        <div class="sk-header">
+          <span class="sk-emoji">🐍</span>
+          <div><div class="sk-name">Python</div><div class="sk-type">Language</div></div>
+          <span class="sk-pct">88%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="88" style="--clr:#3b82f6"></div></div>
+        <div class="sk-tags"><span>Django</span><span>Flask</span><span>Automation</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="lang">
+        <div class="sk-header">
+          <span class="sk-emoji">☕</span>
+          <div><div class="sk-name">Java</div><div class="sk-type">Language</div></div>
+          <span class="sk-pct">65%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="65" style="--clr:#f59e0b"></div></div>
+        <div class="sk-tags"><span>OOP</span><span>DSA</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="lang">
+        <div class="sk-header">
+          <span class="sk-emoji">⚡</span>
+          <div><div class="sk-name">JavaScript</div><div class="sk-type">Language</div></div>
+          <span class="sk-pct">75%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="75" style="--clr:#eab308"></div></div>
+        <div class="sk-tags"><span>ES6+</span><span>DOM</span><span>Async</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="lang">
+        <div class="sk-header">
+          <span class="sk-emoji">🐘</span>
+          <div><div class="sk-name">PHP</div><div class="sk-type">Language</div></div>
+          <span class="sk-pct">55%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="55" style="--clr:#8b5cf6"></div></div>
+        <div class="sk-tags"><span>Backend</span><span>MySQL</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="lang">
+        <div class="sk-header">
+          <span class="sk-emoji">🔷</span>
+          <div><div class="sk-name">C / C++</div><div class="sk-type">Language</div></div>
+          <span class="sk-pct">60%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="60" style="--clr:#06b6d4"></div></div>
+        <div class="sk-tags"><span>DSA</span><span>Competitive</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="web">
+        <div class="sk-header">
+          <span class="sk-emoji">🌐</span>
+          <div><div class="sk-name">HTML5</div><div class="sk-type">Web</div></div>
+          <span class="sk-pct">92%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="92" style="--clr:#f97316"></div></div>
+        <div class="sk-tags"><span>Semantic</span><span>Accessibility</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="web">
+        <div class="sk-header">
+          <span class="sk-emoji">🎨</span>
+          <div><div class="sk-name">CSS3</div><div class="sk-type">Web</div></div>
+          <span class="sk-pct">88%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="88" style="--clr:#3b82f6"></div></div>
+        <div class="sk-tags"><span>Flexbox</span><span>Grid</span><span>Animations</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="web">
+        <div class="sk-header">
+          <span class="sk-emoji">⚛️</span>
+          <div><div class="sk-name">React.js</div><div class="sk-type">Frontend Framework</div></div>
+          <span class="sk-pct">55%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="55" style="--clr:#00d4ff"></div></div>
+        <div class="sk-tags"><span>Hooks</span><span>Components</span><span>Learning</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="web">
+        <div class="sk-header">
+          <span class="sk-emoji">🟢</span>
+          <div><div class="sk-name">Node.js</div><div class="sk-type">Backend Runtime</div></div>
+          <span class="sk-pct">60%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="60" style="--clr:#22c55e"></div></div>
+        <div class="sk-tags"><span>REST API</span><span>npm</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="web">
+        <div class="sk-header">
+          <span class="sk-emoji">🚂</span>
+          <div><div class="sk-name">Express.js</div><div class="sk-type">Web Framework</div></div>
+          <span class="sk-pct">58%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="58" style="--clr:#94a3b8"></div></div>
+        <div class="sk-tags"><span>Routing</span><span>Middleware</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="ds">
+        <div class="sk-header">
+          <span class="sk-emoji">🐼</span>
+          <div><div class="sk-name">Pandas</div><div class="sk-type">Python Library</div></div>
+          <span class="sk-pct">82%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="82" style="--clr:#8b5cf6"></div></div>
+        <div class="sk-tags"><span>Data Analysis</span><span>EDA</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="ds">
+        <div class="sk-header">
+          <span class="sk-emoji">🔢</span>
+          <div><div class="sk-name">NumPy</div><div class="sk-type">Python Library</div></div>
+          <span class="sk-pct">80%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="80" style="--clr:#06b6d4"></div></div>
+        <div class="sk-tags"><span>Arrays</span><span>Math Ops</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="ds">
+        <div class="sk-header">
+          <span class="sk-emoji">📊</span>
+          <div><div class="sk-name">Matplotlib / Seaborn</div><div class="sk-type">Visualization</div></div>
+          <span class="sk-pct">75%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="75" style="--clr:#f59e0b"></div></div>
+        <div class="sk-tags"><span>Charts</span><span>Plots</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="ds">
+        <div class="sk-header">
+          <span class="sk-emoji">🤖</span>
+          <div><div class="sk-name">Scikit-learn</div><div class="sk-type">ML Library</div></div>
+          <span class="sk-pct">62%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="62" style="--clr:#f97316"></div></div>
+        <div class="sk-tags"><span>Classification</span><span>Regression</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="ds">
+        <div class="sk-header">
+          <span class="sk-emoji">🧠</span>
+          <div><div class="sk-name">Machine Learning</div><div class="sk-type">Concept</div></div>
+          <span class="sk-pct">60%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="60" style="--clr:#ec4899"></div></div>
+        <div class="sk-tags"><span>Supervised</span><span>Unsupervised</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="tools">
+        <div class="sk-header">
+          <span class="sk-emoji">🐙</span>
+          <div><div class="sk-name">Git & GitHub</div><div class="sk-type">Version Control</div></div>
+          <span class="sk-pct">85%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="85" style="--clr:#f97316"></div></div>
+        <div class="sk-tags"><span>Branching</span><span>PRs</span><span>Actions</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="tools">
+        <div class="sk-header">
+          <span class="sk-emoji">🟩</span>
+          <div><div class="sk-name">LeetCode</div><div class="sk-type">Problem Solving</div></div>
+          <span class="sk-pct">55%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="55" style="--clr:#f59e0b"></div></div>
+        <div class="sk-tags"><span>DSA</span><span>Algorithms</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="tools">
+        <div class="sk-header">
+          <span class="sk-emoji">🗄️</span>
+          <div><div class="sk-name">MySQL / SQLite</div><div class="sk-type">Database</div></div>
+          <span class="sk-pct">70%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="70" style="--clr:#3b82f6"></div></div>
+        <div class="sk-tags"><span>Queries</span><span>CRUD</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="os">
+        <div class="sk-header">
+          <span class="sk-emoji">💻</span>
+          <div><div class="sk-name">VS Code</div><div class="sk-type">Editor</div></div>
+          <span class="sk-pct">95%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="95" style="--clr:#007acc"></div></div>
+        <div class="sk-tags"><span>Extensions</span><span>Debugging</span><span>Git</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="os">
+        <div class="sk-header">
+          <span class="sk-emoji">🍎</span>
+          <div><div class="sk-name">macOS</div><div class="sk-type">Operating System</div></div>
+          <span class="sk-pct">85%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="85" style="--clr:#94a3b8"></div></div>
+        <div class="sk-tags"><span>Terminal</span><span>Homebrew</span><span>Finder</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="os">
+        <div class="sk-header">
+          <span class="sk-emoji">🪟</span>
+          <div><div class="sk-name">Windows</div><div class="sk-type">Operating System</div></div>
+          <span class="sk-pct">90%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="90" style="--clr:#00adef"></div></div>
+        <div class="sk-tags"><span>PowerShell</span><span>WSL</span></div>
+      </div>
+
+      <div class="skill-card reveal-up" data-cat="os">
+        <div class="sk-header">
+          <span class="sk-emoji">🐧</span>
+          <div><div class="sk-name">Linux / Ubuntu</div><div class="sk-type">Operating System</div></div>
+          <span class="sk-pct">65%</span>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="65" style="--clr:#f97316"></div></div>
+        <div class="sk-tags"><span>CLI</span><span>bash</span><span>Server</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec proj-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">What I've Built</div>
+    <h2 class="sec-title reveal-up">Featured <span class="grad-text">Projects</span></h2>
+    <div class="proj-grid">
+
+      <div class="proj-card proj-featured reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag">⭐ Featured</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+            <a href="https://www.sunoaudiobook.com" class="pa-btn live" title="Live Demo">↗ Live</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">📖</div>
+        <h3 class="proj-title">Suno Audiobook</h3>
+        <p class="proj-desc">An audiobook streaming web app that lets users listen to books on the go. Includes a custom audio player, progress tracking, bookmarks, and a curated library of audiobooks across genres.</p>
+        <div class="proj-features">
+          <span>✓ User Auth</span><span>✓ Audiobook Library</span><span>✓ Categories</span><span>✓ Mobile-first</span>
+        </div>
+        <div class="proj-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>MySQL</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag tag-purple">🎧 Audio</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn">Code</a>
+            <a href="https://www.sunoaudiobook.com" class="pa-btn live">↗ Live</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">🎙️</div>
+        <h3 class="proj-title">Suno Audiobook</h3>
+        <p class="proj-desc">An audiobook streaming web app that lets users listen to books on the go. Includes a custom audio player, progress tracking, bookmarks, and a curated library of audiobooks across genres.</p>
+        <div class="proj-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Audio API</span><span>Python</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag tag-green">🏫 Community</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn">Code</a>
+            <a href="#" class="pa-btn live">↗ Live</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">🤝</div>
+        <h3 class="proj-title">Galgotias Student Community</h3>
+        <p class="proj-desc">A student-built platform for Galgotias University students to connect, share resources, post events, find study groups, and collaborate on projects — a one-stop hub for campus life.</p>
+        <div class="proj-stack">
+          <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>CSS</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag tag-orange">📊 Data Science</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn">Code</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">📈</div>
+        <h3 class="proj-title">Data Analysis Dashboard</h3>
+        <p class="proj-desc">Interactive data visualization dashboard using Python. Performs EDA, generates visual insights from datasets, and presents key metrics with clean charts and graphs.</p>
+        <div class="proj-stack">
+          <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>NumPy</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag">🤖 ML</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn">Code</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">🧠</div>
+        <h3 class="proj-title">ML Classification Model</h3>
+        <p class="proj-desc">A machine learning pipeline built with scikit-learn for classification tasks. Includes preprocessing, feature engineering, model training, hyperparameter tuning, and evaluation metrics.</p>
+        <div class="proj-stack">
+          <span>Python</span><span>scikit-learn</span><span>NumPy</span><span>Pandas</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-up">
+        <div class="proj-bg-glow"></div>
+        <div class="proj-top">
+          <div class="proj-tag tag-cyan">💻 Portfolio</div>
+          <div class="proj-actions">
+            <a href="https://github.com/laxucoder" target="_blank" class="pa-btn">Code</a>
+            <a href="#" class="pa-btn live">↗ Live</a>
+          </div>
+        </div>
+        <div class="proj-icon-big">🌐</div>
+        <h3 class="proj-title">Developer Portfolio v2</h3>
+        <p class="proj-desc">This very portfolio! A fully animated developer portfolio with particle canvas, glitch effects, custom cursor, scroll reveal animations, skills filter, and a responsive dark-glass design system.</p>
+        <div class="proj-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas API</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="proj-cta reveal-up">
+      <a href="https://github.com/laxucoder" target="_blank" class="btn-grad">See All Projects on GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="sec cert-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Credentials</div>
+    <h2 class="sec-title reveal-up">Certifications & <span class="grad-text">Achievements</span></h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal-up">
+        <div class="cert-ribbon">Certified</div>
+        <div class="cert-icon">🏆</div>
+        <h3 class="cert-title">MSCIT</h3>
+        <div class="cert-issuer">Maharashtra State Certificate in Information Technology</div>
+        <p class="cert-desc">Government-recognized computer literacy certification from Maharashtra Knowledge Corporation Limited (MKCL), covering computer fundamentals, internet usage, and digital tools.</p>
+        <div class="cert-meta">
+          <span class="cert-year">📅 Completed</span>
+          <span class="cert-org">🏛️ MKCL, Maharashtra</span>
+        </div>
+        <div class="cert-skills"><span>Computer Basics</span><span>Internet</span><span>MS Office</span><span>Digital Literacy</span></div>
+      </div>
+
+      <div class="cert-card reveal-up upcoming">
+        <div class="cert-ribbon ribbon-purple">In Progress</div>
+        <div class="cert-icon">🌐</div>
+        <h3 class="cert-title">Web Development Bootcamp</h3>
+        <div class="cert-issuer">Online Learning Platform</div>
+        <p class="cert-desc">Comprehensive full-stack web development course covering HTML, CSS, JavaScript, React.js, Node.js, and databases from scratch to advanced level.</p>
+        <div class="cert-meta">
+          <span class="cert-year">📅 2026</span>
+          <span class="cert-org">🎯 In Progress</span>
+        </div>
+        <div class="cert-skills"><span>Full Stack</span><span>React</span><span>Node.js</span></div>
+      </div>
+
+      <div class="cert-card reveal-up upcoming">
+        <div class="cert-ribbon ribbon-orange">In Progress</div>
+        <div class="cert-icon">🐍</div>
+        <h3 class="cert-title">Python for Data Science</h3>
+        <div class="cert-issuer">IBM / Coursera</div>
+        <p class="cert-desc">Professional certification covering Python programming, data analysis, machine learning fundamentals, and data visualization using industry-standard libraries.</p>
+        <div class="cert-meta">
+          <span class="cert-year">📅 2026</span>
+          <span class="cert-org">🎯 In Progress</span>
+        </div>
+        <div class="cert-skills"><span>Python</span><span>ML</span><span>Data Analysis</span></div>
+      </div>
+
+      <div class="cert-card reveal-up upcoming">
+        <div class="cert-ribbon ribbon-green">Planned</div>
+        <div class="cert-icon">☁️</div>
+        <h3 class="cert-title">DSA</h3>
+        <div class="cert-issuer">Data Structures & Algorithms</div>
+        <p class="cert-desc">Passionate about mastering data structures and algorithms to excel in technical interviews and real-world problem-solving./p>
+        <div class="cert-meta">
+          <span class="cert-year">📅 2027</span>
+          <span class="cert-org">🎯 Planned</span>
+        </div>
+        <div class="cert-skills"><span>Cloud</span><span>DSA</span><span>DevOps</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER GOALS -->
+<section id="goals" class="sec goals-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Looking Ahead</div>
+    <h2 class="sec-title reveal-up">Career <span class="grad-text">Goals</span></h2>
+    <div class="goals-layout">
+      <div class="goals-vision reveal-left">
+        <div class="vision-card">
+          <div class="vision-quote">"</div>
+          <p>My mission is to become a world-class machine learning engineer and data scientist — building products that are used by millions of people. I want to combine my passion for code and data to solve real-world problems at scale.</p>
+          <div class="vision-sig">— Laxman Panigrahi</div>
+        </div>
+        <div class="goal-target-card reveal-left">
+          <div class="gtc-icon">🎯</div>
+          <div>
+            <div class="gtc-title">Target Companies</div>
+            <div class="gtc-companies">
+              <span>Google</span><span>Microsoft</span><span>Amazon</span>
+              <span>Flipkart</span><span>Zomato</span><span>FAANG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goals-list reveal-right">
+        <div class="goal-item">
+          <div class="goal-num">01</div>
+          <div class="goal-info">
+            <h3>Land a Top Tech Internship</h3>
+            <p>Secure a machine learning or data science internship at a top product company during 2nd or 3rd year, building real-world industry experience.</p>
+            <span class="goal-timeline">🗓️ Target: 2027–2028</span>
+          </div>
+        </div>
+        <div class="goal-item">
+          <div class="goal-num">02</div>
+          <div class="goal-info">
+            <h3>Master DSA & Competitive Programming</h3>
+            <p>Solve 30+ LeetCode problems, achieve a strong rating on competitive platforms, and master algorithms & data structures for top-tier interviews.</p>
+            <span class="goal-timeline">🗓️ Target: 2026–2027</span>
+          </div>
+        </div>
+        <div class="goal-item">
+          <div class="goal-num">03</div>
+          <div class="goal-info">
+            <h3>Build an Open Source Product</h3>
+            <p>Launch and grow an open source project with 100+ GitHub stars — contributing meaningfully to the developer community.</p>
+            <span class="goal-timeline">🗓️ Target: 2027</span>
+          </div>
+        </div>
+        <div class="goal-item">
+          <div class="goal-num">04</div>
+          <div class="goal-info">
+            <h3>Graduate & Get Dream Placement</h3>
+            <p>Graduate with distinction from Galgotias University and secure a high-package placement at a dream tech company. Full-stack + AI/ML/DS role preferred.</p>
+            <span class="goal-timeline">🗓️ Target: 2030</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB STATS -->
+<section id="github-stats" class="sec gh-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Open Source</div>
+    <h2 class="sec-title reveal-up">GitHub <span class="grad-text">Activity</span></h2>
+    <div class="gh-profile-banner reveal-up">
+      <div class="gh-avatar">
+        <img src="images/profile.jpg" alt="Laxman Panigrahi" class="gh-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="20" r="14" fill="#00d4ff22" stroke="#00d4ff" stroke-width="1.5"/>
+          <circle cx="30" cy="18" r="9" fill="#00d4ff33"/>
+          <ellipse cx="30" cy="52" rx="20" ry="12" fill="#00d4ff22" stroke="#00d4ff" stroke-width="1.5"/>
+          <text x="30" y="24" text-anchor="middle" fill="#00d4ff" font-size="12" font-family="Space Grotesk" font-weight="700">laxucoder</text>
+        </svg>
+      </div>
+      <div class="gh-info">
+        <div class="gh-username">@laxucoder</div>
+        <div class="gh-desc">Aspiring Software Engineer · Data Science Enthusiast</div>
+        <a href="https://github.com/laxucoder" target="_blank" class="gh-visit-btn">Visit GitHub Profile →</a>
+      </div>
+    </div>
+    <div class="gh-stats-grid">
+      <div class="gh-stat-card reveal-up">
+        <div class="ghsc-icon">📦</div>
+        <div class="ghsc-num" data-target="18">0</div>
+        <div class="ghsc-label">Repositories</div>
+      </div>
+      <div class="gh-stat-card reveal-up">
+        <div class="ghsc-icon">✅</div>
+        <div class="ghsc-num" data-target="1500+">0</div>
+        <div class="ghsc-label">Total Commits</div>
+      </div>
+      <div class="gh-stat-card reveal-up">
+        <div class="ghsc-icon">⭐</div>
+        <div class="ghsc-num" data-target="5">0</div>
+        <div class="ghsc-label">Stars Earned</div>
+      </div>
+      <div class="gh-stat-card reveal-up">
+        <div class="ghsc-icon">🔀</div>
+        <div class="ghsc-num" data-target="8">0</div>
+        <div class="ghsc-label">Pull Requests</div>
+      </div>
+    </div>
+    <div class="gh-imgs reveal-up">
+      <img src="https://github-readme-stats.vercel.app/api?username=laxucoder&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4ff&icon_color=7c3aed&text_color=e8eaf0" alt="GitHub Stats" class="gh-img" loading="lazy" onerror="this.style.display='none'"/>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=laxucoder&theme=tokyonight&hide_border=true&background=0d1117&ring=00d4ff&fire=7c3aed&currStreakLabel=00d4ff" alt="GitHub Streak" class="gh-img" loading="lazy" onerror="this.style.display='none'"/>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=laxucoder&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4ff&text_color=e8eaf0" alt="Top Languages" class="gh-img" loading="lazy" onerror="this.style.display='none'"/>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME / CV -->
+<section id="resume" class="sec resume-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">My CV</div>
+    <h2 class="sec-title reveal-up">Resume & <span class="grad-text">Profile</span></h2>
+    <div class="resume-wrap">
+      <div class="resume-preview reveal-left">
+        <div class="cv-card">
+          <div class="cv-header">
+            <div class="cv-pic-slot" id="cvPicSlot">
+              <img src="images/profile.jpg" alt="Laxman Panigrahi" class="cv-pic-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+              <div class="cvp-placeholder">Laxman</div>
+            </div>
+            <div class="cv-head-info">
+              <div class="cv-name">Laxman Panigrahi</div>
+              <div class="cv-role">Software Engineer · Data Science Student</div>
+              <div class="cv-contact-row">
+                <span>📧 laxucoder@gmail.com</span>
+                <span>🐙 github.com/laxucoder</span>
+              </div>
+            </div>
+          </div>
+          <div class="cv-section-row">
+            <div class="cv-col">
+              <div class="cv-sec-title">Education</div>
+              <div class="cv-entry"><strong>B.Tech CSE (Data Science)</strong><br/>Galgotias University · 2026–2030</div>
+              <div class="cv-sec-title" style="margin-top:12px">Certifications</div>
+              <div class="cv-entry">Web Development, Data Science</div>
+              <div class="cv-sec-title" style="margin-top:12px">Skills</div>
+              <div class="cv-skill-list">Python · JavaScript · HTML/CSS · Java · C++ · PHP · Node.js · React.js · Git · MySQL · Pandas · NumPy · ML</div>
+            </div>
+            <div class="cv-col">
+              <div class="cv-sec-title">Projects</div>
+              <div class="cv-entry"><strong>StoryHeaven</strong> — Full-stack story platform</div>
+              <div class="cv-entry"><strong>Suno Audiobook</strong> — Audio streaming app</div>
+              <div class="cv-entry"><strong>Galgotias Student Community</strong> — Campus hub</div>
+              <div class="cv-sec-title" style="margin-top:12px">Platforms</div>
+              <div class="cv-entry">GitHub · LeetCode · LinkedIn</div>
+            </div>
+          </div>
+          <div class="cv-watermark">LAXMAN PANIGRAHI</div>
+        </div>
+      </div>
+      <div class="resume-info reveal-right">
+        <h3>Get My Full Resume</h3>
+        <p>My resume covers my education at Galgotias University, technical skills across 15+ technologies, projects like StoryHeaven, Suno Audiobook, and the Galgotias Student Community, certifications, and my career goals in software engineering & data science.</p>
+        <div class="resume-highlights">
+          <div class="rh-item"><span class="rh-icon">✅</span> B.Tech CSE (Data Science) · Batch 2026</div>
+          <div class="rh-item"><span class="rh-icon">✅</span> 15+ Technologies & Frameworks</div>
+          <div class="rh-item"><span class="rh-icon">✅</span> 6+ Real Projects on GitHub</div>
+          <div class="rh-item"><span class="rh-icon">✅</span> MSCIT and Coding Certified</div>
+          <div class="rh-item"><span class="rh-icon">✅</span> Active LeetCode & GitHub Profile</div>
+          <div class="rh-item"><span class="rh-icon">✅</span> Aiming for Top Tech Placements</div>
+        </div>
+        <div class="resume-btns">
+          <a href="#" class="btn-grad" onclick="window.print(); return false;">🖨️ Print / Save as PDF</a>
+          <a href="mailto:laxucoder@gmail.com" class="btn-glass">📧 Request CV via Email</a>
+        </div>
+        <div class="resume-note">💡 My resume PDF</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="sec tl-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">My Journey</div>
+    <h2 class="sec-title reveal-up">The <span class="grad-text">Story So Far</span></h2>
+    <div class="timeline">
+      <div class="tl-line"></div>
+      <div class="tl-item tl-left reveal-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-yr">2023</div>
+          <h3>Completed 10th — SSC Board</h3>
+          <p>Finished secondary school in Wadsa, Maharashtra. Discovered my love for computers and decided to pursue engineering.</p>
+          <div class="tl-chips"><span>Milestone</span><span>Maharashtra</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-right reveal-right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-yr">2024</div>
+          <h3>MSCIT and Coding Certification</h3>
+          <p>Completed MSCIT from MKCL — my first official tech certification. Built confidence in computers and digital tools.</p>
+          <div class="tl-chips"><span>Certification</span><span>MKCL & Coding</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-left reveal-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-yr">2026</div>
+          <h3>Completed 12th & Started Coding</h3>
+          <p>Finished higher secondary. Moved to self-learning — HTML, CSS, Python, JavaScript. Created GitHub profile (laxucoder) and started pushing daily.</p>
+          <div class="tl-chips"><span>12th Done</span><span>Self Learning</span><span>GitHub</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-right reveal-right">
+        <div class="tl-dot dot-active"></div>
+        <div class="tl-card card-active">
+          <div class="tl-yr yr-active">2026 — Now</div>
+          <h3>B.Tech CSE @ Galgotias University 🚀</h3>
+          <p>Joined Galgotias University, Noida for B.Tech in CSE (Data Science). Building projects, learning daily, networking, and aiming for top tech placements.</p>
+          <div class="tl-chips"><span>University</span><span>Noida</span><span>Current</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-left reveal-left">
+        <div class="tl-dot dot-future"></div>
+        <div class="tl-card card-future">
+          <div class="tl-yr yr-future">2027–2028</div>
+          <h3>Target: Tech Internship 🎯</h3>
+          <p>Land a software engineering or data science internship at a top product company. Level up with real industry experience.</p>
+          <div class="tl-chips"><span>Goal</span><span>Internship</span></div>
+        </div>
+      </div>
+      <div class="tl-item tl-right reveal-right">
+        <div class="tl-dot dot-future"></div>
+        <div class="tl-card card-future">
+          <div class="tl-yr yr-future">2030</div>
+          <h3>Dream Placement at Top Tech 🏆</h3>
+          <p>Graduate from Galgotias University and secure a dream job at Google, Microsoft, Amazon, or a top Indian startup. The journey continues!</p>
+          <div class="tl-chips"><span>Dream</span><span>FAANG</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec contact-sec">
+  <div class="con">
+    <div class="sec-label reveal-up">Let's Connect</div>
+    <h2 class="sec-title reveal-up">Get In <span class="grad-text">Touch</span></h2>
+    <p class="contact-sub reveal-up">Open for internships, collaborations, projects, or just a friendly chat about tech! 🤝</p>
+    <div class="contact-wrap">
+      <div class="contact-left reveal-left">
+        <div class="contact-info-cards">
+          <a href="mailto:laxucoder@gmail.com" class="cic">
+            <div class="cic-icon">📧</div>
+            <div><div class="cic-l">Email</div><div class="cic-v">laxucoder@gmail.com</div></div>
+          </a>
+          <a href="https://github.com/laxucoder" target="_blank" class="cic">
+            <div class="cic-icon">🐙</div>
+            <div><div class="cic-l">GitHub</div><div class="cic-v">github.com/laxucoder</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/laxman-panigrahi-364455363?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="cic">
+            <div class="cic-icon">💼</div>
+            <div><div class="cic-l">LinkedIn</div><div class="cic-v">Laxman Panigrahi</div></div>
+          </a>
+          <a href="https://www.instagram.com/galaxy.coding?igsh=dnN2ZHJndXpuanJ2" target="_blank" class="cic">
+            <div class="cic-icon">📸</div>
+            <div><div class="cic-l">Instagram</div><div class="cic-v">@galaxy.coding</div></div>
+          </a>
+          <div class="cic">
+            <div class="cic-icon">📍</div>
+            <div><div class="cic-l">Location</div><div class="cic-v">Noida, UP</div></div>
+          </div>
+          <div class="cic">
+            <div class="cic-icon">🟢</div>
+            <div><div class="cic-l">Status</div><div class="cic-v">Open to Opportunities</div></div>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/laxucoder" target="_blank" class="sr-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/laxman-panigrahi-364455363?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="sr-btn">LinkedIn</a>
+          <a href="https://www.instagram.com/galaxy.coding?igsh=dnN2ZHJndXpuanJ2" target="_blank" class="sr-btn">Instagram</a>
+          <a href="mailto:laxucoder@gmail.com" class="sr-btn">Email</a>
+        </div>
+      </div>
+      <form class="contact-form reveal-right" id="contactForm">
+        <div class="form-row">
+          <div class="fg">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe" required/>
+          </div>
+          <div class="fg">
+            <label>Email</label>
+            <input type="email" placeholder="john@example.com" required/>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Subject</label>
+          <input type="text" placeholder="Internship opportunity / Collaboration / Just saying hi!"/>
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea rows="6" placeholder="Hey Laxman! I came across your portfolio and wanted to reach out..." required></textarea>
+        </div>
+        <button type="submit" class="btn-grad full">Send Message 🚀</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="con">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <div class="foot-logo">Laxman<span class="accent">.</span></div>
+        <p>Laxman Panigrahi — B.Tech CSE (Data Science) 1st yearstudent at Galgotias University. Building the future one line of code at a time.</p>
+        <div class="foot-social">
+          <a href="https://github.com/laxucoder" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/laxman-panigrahi-364455363?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/galaxy.coding?igsh=dnN2ZHJndXpuanJ2" target="_blank">Instagram</a>
+          <a href="mailto:laxucoder@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <div class="foot-col-title">Navigate</div>
+        <a href="#home">Home</a><a href="#about">About</a>
+        <a href="#education">Education</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#certifications">Certs</a>
+        <a href="#goals">Goals</a><a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <div class="foot-col-title">Projects</div>
+        <a href="https://laxucoder.github.io/plus-2-batch/">plus 2 batch</a><a href="https://www.sunoaudiobook.com">Suno Audiobook</a>
+        <a href="#">Galgotias Community</a><a href="#">Data Dashboard</a>
+        <a href="#">ML Model</a><a href="#">This Portfolio</a>
+      </div>
+      <div class="foot-col">
+        <div class="foot-col-title">Tech Stack</div>
+        <span>Python · JavaScript</span><span>HTML · CSS</span>
+        <span>React.js · Node.js</span><span>Java · C++ · PHP</span>
+        <span>Git · MySQL</span><span>VS Code · macOS</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>©️ 2026<span class="accent-t"> Laxman Panigrahi </span>All Rights Reserved</div>
+      <div class="foot-quote">"Every expert was once a beginner." 🚀</div>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" title="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
